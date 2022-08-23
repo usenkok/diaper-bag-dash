@@ -1,4 +1,4 @@
-#makefile for kelly usenko final project
+#makefile for diaper bag dash
 
 CXX = g++
 
@@ -9,8 +9,8 @@ CXXFLAGS = -std=gnu++11
 CXXFLAGS += -pedantic-errors
 CXXFLAGS += -g
 
-final: main.o game.o space.o patio.o mainfloor.o parentsroom.o kitchen.o kidsroom.o finaltesting.o livingroom.o bathroom.o helpers.o player.o item.o
-	${CXX} ${CXXFLAGS} main.o game.o space.o patio.o mainfloor.o parentsroom.o kitchen.o kidsroom.o finaltesting.o livingroom.o bathroom.o helpers.o player.o item.o -o final
+diaperbagdash: main.o game.o space.o patio.o mainfloor.o parentsroom.o kitchen.o kidsroom.o finaltesting.o livingroom.o bathroom.o helpers.o player.o item.o
+	${CXX} ${CXXFLAGS} main.o game.o space.o patio.o mainfloor.o parentsroom.o kitchen.o kidsroom.o finaltesting.o livingroom.o bathroom.o helpers.o player.o item.o -o diaperbagdash
 
 main.o: main.cpp
 	${CXX} ${CXXFLAGS} -c main.cpp
@@ -55,4 +55,4 @@ item.o: item.cpp item.hpp
 	${CXX} ${CXXFLAGS} -c item.cpp
 
 clean:
-	rm *.o final -f
+	rm *.o diaperbagdash -f
